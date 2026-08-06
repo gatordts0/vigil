@@ -4,6 +4,17 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.9 (Linux) — 2026-08-06
+
+### Added
+- **Merged Inbox setting**, requested directly by David: a new gear icon
+  next to the version number opens a settings panel with one checkbox —
+  "Show all accounts in Inbox." Off by default. Turn it on and every
+  configured account's mail shows up together, grouped by account within
+  Act Now / Reply Needed / No Action, the same restrained pattern already
+  used for Invoices and iCloud aliases — no more switching accounts
+  through the header dropdown just to see everything.
+
 ## v0.3.8 (Linux) — 2026-08-06
 
 ### Added
