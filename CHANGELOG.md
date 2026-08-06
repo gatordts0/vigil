@@ -4,6 +4,16 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.4.2 (Linux) — 2026-08-06
+
+### Fixed
+- **The "wrong date" bug from v0.4.1, for real this time.** That
+  release's own fix accidentally broke itself — a leftover naming clash
+  in the code meant the popup was quietly reading the picked time window
+  (like "168") as a raw timestamp instead of a duration, which is where
+  "Dec 30, 4:00 PM to Dec 31, 4:00 PM" came from. Fixed at the root and
+  double-checked nothing else in the app has the same kind of clash.
+
 ## v0.4.1 (Linux) — 2026-08-06
 
 ### Fixed
