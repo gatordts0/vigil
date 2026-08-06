@@ -4,6 +4,29 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.6 (Linux) — 2026-08-06
+
+### Fixed
+- **Promotional emails no longer get flagged as invoices.** David
+  reported a food-delivery chain's marketing emails ("Large pizza only
+  $9.99") getting detected as real invoices. Fixed with a broader
+  marketing-keyword list, an explicit instruction to the classifier that
+  advertised prices aren't real charges, and a new deterministic backstop
+  that double-checks every invoice detection against known marketing
+  language before it's shown.
+- Same marketing-language safety net that already downgraded
+  wrongly-Urgent promotional email now also applies to "Needs Reply" —
+  catches promo emails with a "reply to redeem"-style call to action.
+
+### Added
+- **New "always ignore" sender learning.** Correcting an email down to No
+  Action now teaches Vigil to always treat future emails from that sender
+  as No Action *and* never flag them as invoices — the FYI-direction
+  counterpart to the existing VIP-sender learning.
+- Alias sub-header (grouping by which iCloud address received an email)
+  now shows whenever an item has one, not just when a section has 2+
+  distinct addresses — more consistent, easier to spot at a glance.
+
 ## v0.3.4 (Linux) — 2026-08-06
 
 ### Fixed
