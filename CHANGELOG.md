@@ -4,6 +4,13 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.8 (Linux) — 2026-08-06
+
+### Added
+- **Version number now shown in the results window**, pinned to the
+  bottom of the left sidebar — always visible at a glance which build
+  you're on.
+
 ## v0.3.7 (Linux) — 2026-08-06
 
 ### Fixed
