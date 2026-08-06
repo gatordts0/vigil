@@ -4,6 +4,17 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.4.0 (Linux) — 2026-08-06
+
+### Added
+- **Fetch window setting** — a new "Fetch window" pill selector in the
+  settings popover, below the merged-inbox checkbox: 24 hours (default,
+  same as always), 3 days, or 7 days. Picking one refetches immediately.
+  Heads up: switching to a wider window for the first time takes a bit
+  longer that one time — every email newly in range has to be classified
+  locally before it can show up. After that first run, it's back to
+  normal speed since already-classified mail is never reprocessed.
+
 ## v0.3.10 (Linux) — 2026-08-06
 
 ### Added
