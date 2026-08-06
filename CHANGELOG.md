@@ -4,6 +4,23 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.4.1 (Linux) — 2026-08-06
+
+### Fixed
+- **The popup now says the right fetch window.** Switching to 7 days and
+  reopening the app used to still say "the last 24 hours" everywhere in
+  the chat popup — that text was never actually wired to the real
+  setting. Fixed in the greet screen, the "working" message, and the
+  "done" summary.
+- **Smaller download** — this build is ~16% smaller than the last one
+  (switched a compression setting in the build itself), so it downloads
+  and installs faster.
+
+### Added
+- **Fetch-window picker added to the popup itself** — not just the
+  results window's settings. Pick 24 hours / 3 days / 7 days right on
+  the "want me to check your emails?" screen, before saying yes.
+
 ## v0.4.0 (Linux) — 2026-08-06
 
 ### Added
