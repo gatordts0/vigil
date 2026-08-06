@@ -4,6 +4,24 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.4 (Linux) — 2026-08-06
+
+### Fixed
+- **Account switcher actually works now.** Switching accounts and
+  refreshing previously left the brief showing the first account's
+  emails, unchanged — the switch/refresh handlers were sending the
+  in-memory result straight to the results window instead of reading the
+  freshly-written brief back off disk, so the window never actually got
+  the new account's items. Reported same day the switcher shipped, fixed
+  same day.
+- Alias sub-header text size increased (12px → 14px) — reported too hard
+  to read.
+- Re-verified and re-applied the `--no-sandbox` AppImage fix (see v0.2.0
+  below) for this build.
+- Excluded a leftover dev-only `PATCH-NOTES.md` from the shipped app
+  bundle (recurring build-config gap, same class as the `config/` fix
+  below).
+
 ## v0.3.2 (Linux) — 2026-08-06
 
 ### Changed
