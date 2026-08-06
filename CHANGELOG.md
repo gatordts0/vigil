@@ -4,6 +4,26 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.7 (Linux) — 2026-08-06
+
+### Fixed
+- **Promotional invoices, for real this time.** David got another
+  Domino's promo flagged as an invoice — this one visibly broken too
+  ("$0.00", "~NaN% lower than average"). The earlier fix's guard let a
+  $0 detection slip through, which then poisoned that vendor's own
+  rolling average to $0 too, causing the NaN. A $0 "invoice" is now
+  always treated as not a real one, and the average-comparison math can
+  no longer divide by zero even if a bad record ever gets in some other
+  way.
+
+### Added
+- **"Ask about this brief" can now actually fix a wrong invoice**, not
+  just explain it. Say something like *"that Domino's thing isn't a real
+  invoice"* and Vigil removes it and remembers to ignore that sender
+  going forward — in both the popup's assistant and the results window's
+  own chat panel, where the fix now shows up immediately without a
+  manual refresh.
+
 ## v0.3.6 (Linux) — 2026-08-06
 
 ### Fixed
