@@ -4,6 +4,30 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.2 (Linux) — 2026-08-06
+
+### Changed
+- **Classification labels renamed** and a **header account switcher +
+  refresh control** added (from the Windows source update).
+- **iCloud alias tag now always shown** on an email card when it differs
+  from the account address, not just when a section has 2+ distinct
+  aliases — makes single-off-address mail visible too, not only when
+  there's a full group to split.
+- **Alias matching is now case-insensitive** — the same address arriving
+  in different casings (a real, confirmed case) no longer shows up as two
+  separate groups.
+- **Transparent window backgrounds** on both the popup and results
+  windows, fixing visible white corners around the rounded window shape.
+
+### Fixed
+- Re-verified and re-applied the `--no-sandbox` AppImage fix (originally
+  introduced in v0.2.0, see below) after it briefly regressed back to a
+  launcher-only workaround during this build's assembly — confirmed
+  baked into `AppRun` again, works regardless of how the AppImage is
+  launched.
+- Excluded a leftover dev-only `PATCH-NOTES.md` from the shipped app
+  bundle.
+
 ## v0.3.1 (Linux) — 2026-08-05
 
 ### Changed
