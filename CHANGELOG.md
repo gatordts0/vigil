@@ -4,6 +4,15 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.10 (Linux) — 2026-08-06
+
+### Added
+- **Greeting added to the results window** — "Good morning/afternoon/
+  evening, {name} 👋" plus today's date now sits above the search bar,
+  time-of-day aware (not hardcoded to "morning").
+- **Search moved above the filter tabs** — was tabs-then-search, now
+  search-then-tabs.
+
 ## v0.3.9 (Linux) — 2026-08-06
 
 ### Added
