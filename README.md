@@ -6,4 +6,5 @@ invoices, and supports standing "watches" and local file search. Nothing
 about your email leaves your machine.
 
 Grab the latest build from the **Releases** page on the right side of
-this repo.
+this repo. See [CHANGELOG.md](CHANGELOG.md) for what's changed in each
+version.
