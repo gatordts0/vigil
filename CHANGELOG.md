@@ -4,6 +4,24 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.3.1 (Linux) — 2026-08-05
+
+### Changed
+- **New build synced from the Windows source.** The single-instance lock
+  and iCloud alias-grouping fixes from v0.2.1 (which were only ever a
+  Linux-side patch on top of the built app) are now part of the real app
+  source itself. Alias grouping was also extended further: an alias tag
+  now shows directly on individual email cards (not just the section
+  sub-headers) whenever it differs from the account tag.
+
+### Fixed
+- **`--no-sandbox` re-baked into this build's AppImage launcher script.**
+  This is a Linux-packaging-only fix (Chromium's sandbox can't work
+  inside an AppImage's own mount regardless of the app itself) that has
+  to be reapplied to every new AppImage build until it's handled at the
+  build-tool level — it isn't something that lives in the app source, so
+  a fresh build from Windows doesn't carry it over automatically.
+
 ## v0.2.1 (Linux) — 2026-08-05
 
 ### Added
