@@ -4,6 +4,43 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.7.0 (Linux) — 2026-08-07
+
+### Fixed
+- **The four security issues from your audit are fixed** - thank you for
+  the detailed writeup, it was genuinely useful:
+  - Every internal message inside the app now checks it's actually
+    coming from Vigil's own window before acting on it, instead of
+    trusting anything that could send a message.
+  - The specific actions you flagged (opening a file, opening a link,
+    revealing a file in its folder, opening the results window) are now
+    restricted to only the files/links Vigil itself would ever actually
+    use - not arbitrary paths or URLs.
+  - Both windows now have a proper Content-Security-Policy and can't be
+    made to navigate anywhere or pop open a new window.
+  - **The Chromium sandbox issue has a real fix now, not just a
+    workaround**: Vigil is now also available as a `.deb` package (see
+    below) - installing it that way lets the sandbox actually run
+    instead of needing `--no-sandbox`. The AppImage still needs
+    `--no-sandbox` (that's a hard limitation of the AppImage format
+    itself, not something Vigil's code can fix), so if the sandbox
+    matters to you, the `.deb` is the one to use going forward.
+- **Updated to a current, supported version of Electron** (was 12
+  versions/multiple years behind) plus a mail-sending library update
+  that had a few real security fixes of its own - both checked
+  carefully against everything Vigil actually does and tested end to
+  end before shipping, nothing about how the app works should feel
+  different.
+
+### Added
+- **A `.deb` package**, for anyone who'd rather `apt install` Vigil than
+  run the AppImage directly - see below. The AppImage keeps working
+  exactly as before if you prefer that.
+  To install it: `sudo apt install ./vigil_0.7.0_amd64.deb` (downloaded
+  from this release, same as the AppImage). Uninstall later with
+  `sudo apt remove vigil` if you ever want to.
+
+
 ## v0.6.0 (Linux) — 2026-08-07
 
 ### Fixed
