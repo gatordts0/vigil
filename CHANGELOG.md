@@ -4,6 +4,33 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.6.0 (Linux) — 2026-08-07
+
+### Fixed
+- **The taskbar/dock icon now actually shows up.** Since the icon first
+  shipped, it only ever appeared in the system tray - the taskbar/dock
+  kept showing a generic icon instead. Root cause was how the icon file
+  was packaged for Linux, not the icon itself. Fixed and confirmed by
+  extracting the real, rebuilt app and checking the icon files directly.
+
+### Added
+- **Vigil should notice things more accurately now**, especially two
+  changes worth knowing about:
+  - Classification (Urgent/Needs Reply/No Action) and invoice detection
+    can now run on a separate, more accurate model than the interactive
+    Ask panel/chat, if you've got a bigger local model available. Off by
+    default - nothing changes unless you turn it on in Settings.
+  - Asking about your brief now understands paraphrased questions
+    better - e.g. "what did the guy about the roof say" can find the
+    right email even if it never uses the word "roof."
+- **Asking something totally unrelated to your inbox** (general trivia,
+  "write me a poem") now gets a clear, quick "that's outside what I can
+  help with" instead of a vague non-answer.
+- Small reliability fix: the background watch-checker now tries to
+  start Ollama itself if it's installed but not running yet (matching
+  what the main app already did), instead of silently doing nothing
+  until you open the app.
+
 ## v0.5.0 (Linux) — 2026-08-07
 
 ### Added
