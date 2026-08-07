@@ -4,6 +4,40 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.5.0 (Linux) — 2026-08-07
+
+### Added
+- **Vigil finally has a real icon and logo** instead of a generic
+  placeholder — an owl mark (watching over your inbox) plus a proper
+  wordmark, on the taskbar, the tray, and inside the app itself.
+- **"Push to Frappe"** — an email-detected invoice can now be sent
+  straight into your Accounting module as a draft Purchase Invoice, with
+  one click from the Invoices tab. It's always created as a draft, never
+  auto-submitted, so you review and finish it yourself before it's real.
+  (Needs a new write-enabled connection under Settings first — ask Diego
+  if you want this turned on.)
+- **"Report a bug or suggestion"** — a new entry in Settings lets you
+  send a bug report or idea straight over, with a screenshot attached if
+  you want, no email client needed.
+- **The "Ask about this brief" panel is bigger** and no longer needs
+  double scrolling to read a normal answer.
+- **Asking to see something now actually shows it in the brief.**
+  "Show me the emails from David" or "show me 5 no action emails" used
+  to just print a list back inside the little chat box — now it filters
+  the real brief list on screen instead, with a quick note confirming
+  what matched.
+
+### Fixed
+- **The activity log no longer misattributes a multi-account run to one
+  account.** A brief covering two mailboxes used to log the whole total
+  under whichever one it finished with — now it spells out the real
+  per-account split.
+- Several rounds of small follow-up fixes to the "show me" filtering
+  above, including recognizing "urgent"/"no action"/"reply needed" as
+  real categories instead of literal search words.
+
+---
+
 ## v0.4.2 (Linux) — 2026-08-06
 
 ### Fixed
