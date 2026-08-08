@@ -4,6 +4,27 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v1.0.0 (Windows) — 2026-08-08
+
+### Added
+- **Dedicated Settings window** — Mail / AI / Help accordion in its own
+  glass window (not cramped in the Daily Brief sidebar).
+- **Settings in the tray popup** — **Settings…** sits under **+ Add
+  another account** so you can open Settings without opening the brief.
+- **Add note to CRM** on email cards (click-to-handoff Comment on a Lead).
+- **Call Logs** tab in the Daily Brief (read-only; needs Call Log access
+  on the Frappe site).
+- **Glass UI polish** — dual pulsing green edge glows on popup and brief.
+
+### Fixed
+- **Daily Brief text/icons** no longer show garbled characters in the
+  greeting, Ask panel, and section headers.
+
+> Linux AppImage / .deb for 1.0.0 are not in this release yet — Tanner:
+> pull gatordts0/vigil-src **main @ 4dbed82**, rebuild, and attach
+> Linux assets (or ship a 1.0.0 Linux follow-up). This tag ships the
+> Windows portable .exe only.
+
 ## v0.7.1 (Windows) — 2026-08-07
 
 ### Fixed
