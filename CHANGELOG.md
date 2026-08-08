@@ -4,6 +4,27 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v0.7.1 (Windows) — 2026-08-07
+
+### Fixed
+- **Windows no longer silently signs you out after a rebuild or relaunch.**
+  Saved accounts and settings now live in a stable AppData folder (same
+  idea Linux already used), with a one-time migration the first time you
+  open this build. Closing or reinstalling the single-file Windows
+  download shouldn't wipe your login anymore.
+- **Run-at-login** won't re-point itself at a temporary extract path when
+  you're running the portable Windows build from Temp — that was a
+  common source of odd black console flashes at startup.
+
+### Added
+- **Glass look for the popup and Daily Brief** — frosted panel, soft blur,
+  green edge glow, and a much less see-through main surface so the
+  desktop doesn't show through while you work.
+
+> Linux AppImage / `.deb` for 0.7.1 are not in this release yet — stay on
+> v0.7.0 (Linux) until those land. This tag ships the Windows portable
+> `.exe` only.
+
 ## v0.7.0 (Linux) — 2026-08-07
 
 ### Fixed
