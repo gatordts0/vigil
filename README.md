@@ -8,3 +8,5 @@ about your email leaves your machine.
 Grab the latest build from the **Releases** page on the right side of
 this repo. See [CHANGELOG.md](CHANGELOG.md) for what's changed in each
 version.
+
+Setting up on Linux? See [LINUX-SETUP.md](LINUX-SETUP.md).
