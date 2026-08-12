@@ -40,13 +40,24 @@ what's new in that version and everything that came before it.
 ### Fixed
 - Builds no longer bundle developer config backups or internal
   coordination docs. The app archive is less than half its previous size.
+  Every build is now checked automatically and fails if anything of that
+  kind is present, so it can't come back quietly.
 - The uninstaller and update metadata are no longer lost when a new build
   is applied over an existing install.
 
+> **This release's download files were replaced on 2026-08-12.** The first
+> upload still contained two of the developer's own config backups — the
+> same problem v1.0.0 had, in a folder one level deeper that the original
+> fix didn't cover. The files here now are built from a verified-clean
+> archive. Nothing had been downloaded before the replacement, so if you
+> only have what's currently attached you have the right build.
+
 > Linux AppImage / .deb for 1.1.0 aren't in this release yet — Tanner:
-> pull gatordts0/vigil-src **main @ 1f4c109**, rebuild, and attach the
-> Linux assets. **Any Linux build made before 1f4c109 carries the same
-> bundled config backups — don't distribute those.**
+> pull gatordts0/vigil-src **main @ 7b75a79** (not `1f4c109` — that commit's
+> fix was incomplete), rebuild, and attach the Linux assets. **Run
+> `node tools/audit-build.js <your built app.asar>` and treat a FAIL as
+> "do not distribute".** Any Linux build made before `7b75a79` may carry
+> bundled config backups.
 
 ## v1.0.0 (Windows) — 2026-08-08 — withdrawn
 
