@@ -4,7 +4,51 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
-## v1.0.0 (Windows) — 2026-08-08
+## v1.1.0 (Windows) — 2026-08-11
+
+> **v1.0.0 has been withdrawn.** That build accidentally bundled the
+> developer's own local config-backup folder. It contained no data
+> belonging to anyone who downloaded it, and nothing about your setup was
+> ever collected or transmitted — Vigil remains fully local. If you have
+> the v1.0.0 download, delete it and use this release instead.
+
+### Added
+- **Business Memory is the landing screen**, opening on **Business
+  Vitals** — Cash Flow, Vendor Spend and Invoice gauges built from what
+  Vigil has actually learned about your vendors, with a flag strip
+  calling out anything unusual.
+- **Summary band on the brief** — the same Urgent / invoices / watches
+  counts the tray popup ends on now carry into the window, so opening
+  the brief continues that screen instead of restarting on a raw list.
+  Counts that are zero aren't shown at all.
+- **Windows installer** — a proper Setup with a Start Menu entry, desktop
+  shortcut, real uninstaller and background update support. The portable
+  single-file `.exe` is still available.
+
+### Changed
+- **The Daily Brief was restyled.** Emoji icons replaced with line icons
+  across the sidebar and filters, section headers rebuilt as quiet labels
+  rather than headings that competed with your email subjects, and
+  urgency now reads as a coloured dot on the subject line instead of a
+  bar down the side of every card.
+- **The brief animates in** — content settles into place one piece at a
+  time and each vitals gauge draws its ring as it arrives. Honours your
+  system's reduced-motion setting.
+- The greeting is plainer, and the line beneath it now tells you how much
+  actually came in.
+
+### Fixed
+- Builds no longer bundle developer config backups or internal
+  coordination docs. The app archive is less than half its previous size.
+- The uninstaller and update metadata are no longer lost when a new build
+  is applied over an existing install.
+
+> Linux AppImage / .deb for 1.1.0 aren't in this release yet — Tanner:
+> pull gatordts0/vigil-src **main @ 1f4c109**, rebuild, and attach the
+> Linux assets. **Any Linux build made before 1f4c109 carries the same
+> bundled config backups — don't distribute those.**
+
+## v1.0.0 (Windows) — 2026-08-08 — withdrawn
 
 ### Added
 - **Dedicated Settings window** — Mail / AI / Help accordion in its own
