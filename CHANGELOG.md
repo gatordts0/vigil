@@ -4,6 +4,19 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v1.1.1 (Windows) — 2026-08-14
+
+### Fixed
+- **Recurring "Vigil: connection problem" notifications.** The background
+  watch check (the once-a-minute poll that watches for newly Urgent mail)
+  was re-downloading a full 24 hours of mailbox every single time it ran,
+  instead of just checking for what's new — heavy enough to occasionally
+  time out against the mail server, which is what those notifications were
+  reporting. The watch check now only looks at roughly the last hour each
+  time, which is all it ever needed. This doesn't change how much mail
+  your scheduled daily brief or a manual check reads — that's controlled
+  separately by your fetch-window setting, unaffected by this fix.
+
 ## v1.1.0 (Windows) — 2026-08-11
 
 > **v1.0.0 has been withdrawn.** That build accidentally bundled the
