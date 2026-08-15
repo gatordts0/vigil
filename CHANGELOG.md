@@ -4,6 +4,17 @@ All notable changes to Vigil are documented here. Every GitHub release's
 notes are the relevant slice of this file, so any release tag shows both
 what's new in that version and everything that came before it.
 
+## v1.1.2 (Windows) — 2026-08-15
+
+### Fixed
+- **Claude (Anthropic) engine failed every classification request.** If you
+  switched Vigil's AI engine to Claude in Settings, every brief silently
+  came back with 0 emails classified and 0 invoices found — Claude was
+  never actually reading your mail. Vigil was sending a sampling parameter
+  (`temperature`) that current Claude models reject outright. Local AI
+  (Ollama) and OpenAI-compatible engines were never affected — this only
+  hit the Claude option specifically.
+
 ## v1.1.1 (Windows) — 2026-08-14
 
 ### Fixed
